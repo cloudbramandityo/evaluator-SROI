@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+@media print {
+  /* Universal print optimizations */
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide navigation, toolbars, and non-printable elements */
+  header,
+  nav,
+  footer,
+  button,
+  .print\\:hidden,
+  [data-print-hidden="true"] {
+    display: none !important;
+  }
+
+  /* Prevent bad page splits */
+  .print-page-break-before {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  .print-page-break-after {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  .print-avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Force full width without web page padding */
+  .print-container {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Ensure monochrome text contrast */
+  .print-monochrome * {
+    color: #111827 !important;
+    border-color: #374151 !important;
+  }
+}

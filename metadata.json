@@ -1,0 +1,8 @@
+{
+  "name": "Evaluator TJSL - SROI & IKM",
+  "description": "Sistem Evaluasi Komprehensif Tanggung Jawab Sosial & Lingkungan (TJSL) PT PLN (Persero) UID Sulselrabar berbasis SROI dan 9 Unsur IKM Permenpan-RB.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
